@@ -6,15 +6,15 @@ DISTDIR=dist
 TMP=/tmp
 
 # change these to reflect your Lua installation
-LUA= $(HOME)/local/lua-5.2
-LUAINC= $(LUA)/include
+LUA= /opt/ngx-openresty/luajit
+LUAINC= $(LUA)/include/luajit-2.1
 LUALIB= $(LUA)/lib
 LUABIN= $(LUA)/bin
 
 ZLIB=../zlib-1.2.3
 
 # no need to change anything below here
-CFLAGS= $(INCS) $(DEFS) $(WARN) -O0 -fPIC
+CFLAGS= $(INCS) $(DEFS) $(WARN) -O0 -fPIC -g
 WARN= -g -Werror -Wall -pedantic #-ansi
 INCS= -I$(LUAINC) -I$(ZLIB)
 LIBS= -L$(ZLIB) -lz -L$(LUALIB) -L$(LUABIN) #-llua51
