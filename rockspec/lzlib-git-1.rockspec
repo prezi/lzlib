@@ -1,7 +1,7 @@
 package="lzlib"
 version="git-1"
 source = {
-   url = "git://github.com/LuaDist/lzlib.git",
+   url = "git://github.com/prezi/lzlib.git",
    branch = "master",
 }
 description = {
